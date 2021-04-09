@@ -1,24 +1,24 @@
 <div class="container">
   <h1>Form Heading</h1>
-  <form (ngSubmit)="submit">
+  <form #login="ngForm" (ngSubmit)="submit(login)">
     <div class="form-group">
       <label for="firstName">First Name</label><br>
-      <input type="text" name="firstName" class="form-control" id="firstName" ngModel>
+      <input required minlength="2" maxlength="10" type="text" name="firstName" class="form-control" id="firstName" ngModel>
     </div>
     <pre></pre>
     <div class="form-group">
       <label for="lastName">Last Name</label><br>
-      <input type="text" name="lastName" class="form-control" id="lastName" ngModel>
+      <input required minlength="2" maxlength="10" type="text" name="lastName" class="form-control" id="lastName" ngModel>
     </div>
     <pre></pre>
     <div class="form-group">
       <label for="email">Email</label><br>
-      <input type="text" name="email" class="form-control" id="email" ngModel>
+      <input required minlength="2" maxlength="20" type="text" name="email" class="form-control" id="email" ngModel>
     </div>
     <pre></pre>
     <div class="form-group">
       <label for="password">Password</label><br>
-      <input type="text" name="password" class="form-control" id="password" ngModel>
+      <input required minlength="6" maxlength="20" type="text" name="password" class="form-control" id="password" ngModel>
     </div>
     <pre></pre>
     <button class="btn btn-primary">Submit</button>
